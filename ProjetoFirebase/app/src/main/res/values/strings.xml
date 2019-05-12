@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ProjetoFirebase</string>
+    <string name="question_1">Qual o percentual de água doce no planeta terra?</string>
+    <string name="question_2">Qual o bioma (espaço geográfico) mais ameaçado do país?</string>
+    <string name="question_3">Segundo a Organização Mundial de Saúde (OMS), a cada ano 7 milhões de pessoas morrem por causa da poluição do ar. No Brasil morrem:</string>
+    <string name="res_titulo">Sign in</string>
+    <!-- Strings related to login -->
+    <string name="res_email">Email</string>
+    <string name="res_senha">Senha</string>
+    <string name="res_btnEntrar">Entrar</string>
+    <string name="res_btnNovoCadastro">Não possui cadastro? Cadastre-se</string>
+    <string name="res_cadastro">Cadastre-se</string>
+    <string name="res_nome">Nome</string>
+    <string name="res_confirma">Confirme a Senha</string>
+    <string name="res_btnCadastrar">Cadastrar</string>
+    <string name="res_btnCancelar">Cancelar</string>
+</resources>
