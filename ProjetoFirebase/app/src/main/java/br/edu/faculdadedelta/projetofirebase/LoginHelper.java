@@ -2,6 +2,7 @@ package br.edu.faculdadedelta.projetofirebase;
 
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
+import android.text.TextUtils;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
 import br.edu.faculdadedelta.projetofirebase.modelo.Usuario;
@@ -23,6 +24,8 @@ public class LoginHelper {
     private TextInputEditText etCadConfirma;
 
     private Usuario usuario;
+
+    private String erro = "Campo Obrigatório";
 
     public LoginHelper(LoginActivity activity) {
         ilLoginEmail = activity.findViewById(R.id.hintLoginEmail);
@@ -47,6 +50,12 @@ public class LoginHelper {
         etCadEmail.setText("");
         etCadSenha.setText("");
         etCadConfirma.setText("");
+        ilCadSenha.setError(null);
+        ilCadConfirma.setError(null);
+        ilCadEmail.setError(null);
+        ilCadNome.setError(null);
+        ilLoginEmail.setError(null);
+        ilLoginSenha.setError(null);
         usuario = new Usuario();
     }
 
@@ -55,5 +64,49 @@ public class LoginHelper {
         usuario.setEmail(etCadEmail.getText().toString());
         usuario.setSenha(etCadSenha.getText().toString());
         return usuario;
+    }
+
+
+    public boolean isCadastroValid(){
+        boolean retorno = true;
+        if(TextUtils.isEmpty(etCadNome.getText().toString())){
+            ilCadNome.setError(" ");
+            retorno = false;
+        }
+        if(TextUtils.isEmpty(etCadEmail.getText().toString())){
+            ilCadEmail.setError(" ");
+            retorno = false;
+        }
+        if(TextUtils.isEmpty(etCadSenha.getText().toString())){
+            ilCadSenha.setError(" ");
+            retorno = false;
+        }
+        if(TextUtils.isEmpty(etCadConfirma.getText().toString())){
+            ilCadConfirma.setError(" ");
+            retorno = false;
+        }
+        if(!isSenhaValid()){
+            ilCadSenha.setError(" ");
+            ilCadConfirma.setError("Senhas não conferem");
+            retorno = false;
+        }
+        return retorno;
+    }
+
+    private boolean isSenhaValid(){
+        return etCadSenha.getText().toString().equals(etCadConfirma.getText().toString());
+    }
+
+    public boolean isLoginValid(){
+        boolean retorno = true;
+        if(TextUtils.isEmpty(etLoginEmail.getText().toString())){
+            ilLoginEmail.setError(" ");
+            retorno = false;
+        }
+        if(TextUtils.isEmpty(etLoginSenha.getText().toString())){
+            ilLoginSenha.setError(" ");
+            retorno = false;
+        }
+        return retorno;
     }
 }

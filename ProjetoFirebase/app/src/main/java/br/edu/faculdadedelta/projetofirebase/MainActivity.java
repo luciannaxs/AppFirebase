@@ -7,7 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -25,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
     private FrameLayout frameDois;
     private FrameLayout frameTres;
 
+    private FirebaseAuth mAuth;
+    private FirebaseUser user;
+
+    private TextView tvUser;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,23 +42,11 @@ public class MainActivity extends AppCompatActivity {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference();
 
+        mAuth = FirebaseAuth.getInstance();
+        user = mAuth.getCurrentUser();
 
-
-        /*Usuario usuario = new Usuario();
-        usuario.setId(2L);
-        usuario.setNome("Samuca");
-        usuario.setEmail("samuca@gmail.com");
-        usuario.setSenha(BCrypt.withDefaults().hashToString(12, "viado".toCharArray()));
-
-        myRef.child("usuarios").child(String.valueOf(usuario.getId())).setValue(usuario);
-
-        btnTestar = findViewById(R.id.btnTestar);
-        btnTestar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                testar();
-            }
-        });*/
+        tvUser = findViewById(R.id.tvUser);
+        tvUser.setText("Bem Vindo(a): ".concat(user.getDisplayName()));
 
         frameUm = findViewById(R.id.frameUm);
         frameDois = findViewById(R.id.frameDois);
@@ -86,8 +82,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void testar() {
-        Intent intent = new Intent(getBaseContext(), TesteActivity.class);
-        startActivity(intent);
-    }
 }

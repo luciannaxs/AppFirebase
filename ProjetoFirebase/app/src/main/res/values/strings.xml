@@ -14,4 +14,5 @@
     <string name="res_confirma">Confirme a Senha</string>
     <string name="res_btnCadastrar">Cadastrar</string>
     <string name="res_btnCancelar">Cancelar</string>
+    <string name="res_erroForm">Campo Obrigatório</string>
 </resources>
