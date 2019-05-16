@@ -16,8 +16,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
-import br.edu.faculdadedelta.projetofirebase.dao.UsuarioDao;
 import br.edu.faculdadedelta.projetofirebase.modelo.Usuario;
 
 public class LoginActivity extends AppCompatActivity {
@@ -79,7 +79,8 @@ public class LoginActivity extends AppCompatActivity {
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cadastrar();
+                if (helper.isCadastroValid())
+                    cadastrar();
             }
         });
 
@@ -87,14 +88,14 @@ public class LoginActivity extends AppCompatActivity {
         btnEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                logar();
+                if (helper.isLoginValid())
+                    logar();
             }
         });
     }
 
-    private void cadastrar(){
-        Usuario usuario = helper.popularModelo();
-        UsuarioDao dao = new UsuarioDao();
+    private void cadastrar() {
+        final Usuario usuario = helper.popularModelo();
 
         mAuth.createUserWithEmailAndPassword(usuario.getEmail(), usuario.getSenha())
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -104,6 +105,11 @@ public class LoginActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success");
                             user = mAuth.getCurrentUser();
+                            if (user != null) {
+                                UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
+                                        .setDisplayName(usuario.getNome()).build();
+                                user.updateProfile(profileUpdates);
+                            }
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "createUserWithEmail:failure", task.getException());
@@ -115,7 +121,6 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
 
-        dao.incluir(usuario);
         frameCadastro.setVisibility(View.GONE);
         frameLogin.setVisibility(View.VISIBLE);
         helper.limparCampos();
@@ -123,7 +128,7 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    private void logar(){
+    private void logar() {
         mAuth.signInWithEmailAndPassword(etLoginEmail.getText().toString(), etLoginSenha.getText().toString())
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
