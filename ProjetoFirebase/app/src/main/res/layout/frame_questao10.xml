@@ -1,0 +1,61 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/question_10"
+            android:textColor="@color/perguntas"
+            android:padding="5dp"
+            android:textSize="15sp"
+            android:maxLines="10" />
+
+        <RadioGroup
+            android:id="@+id/radioQuestao10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Poluição e contaminação das águas."/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Represamento de águas." />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enchentes nas cidades." />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Todas as alternativas."
+                android:id="@+id/resposta10"/>
+
+        </RadioGroup>
+
+        <android.support.design.button.MaterialButton
+            android:id="@+id/btnDez"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/res_responder"
+            app:backgroundTint="@color/colorPrimary"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginHorizontal="30dp"/>
+
+    </LinearLayout>
+
+</FrameLayout>

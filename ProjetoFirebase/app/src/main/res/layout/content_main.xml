@@ -13,341 +13,70 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <FrameLayout
+        <include
             android:id="@+id/frameUm"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="visible">
+            layout="@layout/frame_questao1"
+            android:visibility="visible"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="20dp"
-                    android:paddingLeft="5dp"
-                    android:text="@string/question_1"
-                    android:textColor="@color/perguntas"
-                    android:textSize="15sp" />
-
-                <RadioGroup
-                    android:id="@+id/radioQuestao1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp">
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="2,5% a 4%" />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="40% a 60%" />
-
-                    <RadioButton
-                        android:id="@+id/resposta1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="70 a 75%" />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="99%" />
-
-                </RadioGroup>
-
-                <android.support.design.button.MaterialButton
-                    android:id="@+id/btnUm"
-                    android:layout_width="178dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|center_horizontal"
-                    android:layout_marginHorizontal="30dp"
-                    android:baselineAligned="false"
-                    android:text="@string/res_responder"
-                    app:backgroundTint="@color/colorPrimary" />
-
-            </LinearLayout>
-            s
-
-        </FrameLayout>
-
-        <FrameLayout
+        <include
             android:id="@+id/frameDois"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone">
+            layout="@layout/frame_questao2"
+            android:visibility="gone"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="match_parent"
-                    android:layout_height="112dp"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/biomas" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="5dp"
-                    android:text="@string/question_2"
-                    android:textColor="@color/perguntas"
-                    android:textSize="15sp" />
-
-                <RadioGroup
-                    android:id="@+id/radioQuestao2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp">
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Pampa" />
-
-                    <RadioButton
-                        android:id="@+id/resposta2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Mata Atlântica" />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Cerrado" />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Amazônia" />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Caatinga" />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Pantanal" />
-
-                </RadioGroup>
-
-                <android.support.design.button.MaterialButton
-                    android:id="@+id/btnDois"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|center_horizontal"
-                    android:layout_marginHorizontal="30dp"
-                    android:text="@string/res_responder"
-                    app:backgroundTint="@color/colorPrimary" />
-
-            </LinearLayout>
-
-        </FrameLayout>
-
-        <FrameLayout
+        <include
             android:id="@+id/frameTres"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone">
+            layout="@layout/frame_questao3"
+            android:visibility="gone"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/question_3"
-                    android:textColor="@color/perguntas"
-                    android:padding="5dp"
-                    android:textSize="15sp"/>
-
-                <RadioGroup
-                    android:id="@+id/radioQuestao3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp">
-
-                    <RadioButton
-                        android:id="@+id/resposta3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="50 mil" />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="5 mil" />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="2 mil" />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="1 mil" />
-
-                </RadioGroup>
-
-                <android.support.design.button.MaterialButton
-                    android:id="@+id/btnTres"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/res_responder"
-                    app:backgroundTint="@color/colorPrimary"
-                    android:layout_gravity="center_vertical|center_horizontal"
-                    android:layout_marginHorizontal="30dp"/>
-
-            </LinearLayout>
-
-        </FrameLayout>
-
-        <FrameLayout
+        <include
             android:id="@+id/frameQuatro"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone">
+            layout="@layout/frame_questao4"
+            android:visibility="gone"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+        <include
+            android:id="@+id/frameCinco"
+            layout="@layout/frame_questao5"
+            android:visibility="gone"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/question_4"
-                    android:textColor="@color/perguntas"
-                    android:padding="5dp"
-                    android:textSize="15sp"
-                    android:maxLines="10" />
+        <include
+            android:id="@+id/frameSeis"
+            layout="@layout/frame_questao6"
+            android:visibility="gone"/>
 
-                <RadioGroup
-                    android:id="@+id/radioQuestao4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp">
+        <include
+            android:id="@+id/frameSete"
+            layout="@layout/frame_questao7"
+            android:visibility="gone"/>
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="I, apenas." />
+        <include
+            android:id="@+id/frameOito"
+            layout="@layout/frame_questao8"
+            android:visibility="gone"/>
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="II, apenas." />
+        <include
+            android:id="@+id/frameNove"
+            layout="@layout/frame_questao9"
+            android:visibility="gone"/>
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="III, apenas." />
+        <include
+            android:id="@+id/frameDez"
+            layout="@layout/frame_questao10"
+            android:visibility="gone"/>
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="I e II, apenas." />
+        <include
+            android:id="@+id/frameOnze"
+            layout="@layout/frame_questao11"
+            android:visibility="gone"/>
 
-                    <RadioButton
-                        android:id="@+id/resposta4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="I, II e III." />
+        <include
+            android:id="@+id/frameDoze"
+            layout="@layout/frame_questao12"
+            android:visibility="gone"/>
 
-                </RadioGroup>
-
-                <android.support.design.button.MaterialButton
-                    android:id="@+id/btnQuatro"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/res_responder"
-                    app:backgroundTint="@color/colorPrimary"
-                    android:layout_gravity="center_vertical|center_horizontal"
-                    android:layout_marginHorizontal="30dp"/>
-
-            </LinearLayout>
-
-        </FrameLayout>
-
-        <FrameLayout
+        <include
             android:id="@+id/frameFinal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="240dp"
-                    android:src="@drawable/ic_frame_final" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/tela_final"
-                    android:textAlignment="center"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/tvAcertos"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="30dp"
-                    android:textSize="15sp" />
-                <TextView
-                    android:id="@+id/tvPercAcertos"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="30dp"
-                    android:textSize="15sp" />
-                <TextView
-                    android:id="@+id/tvQtdQuestoes"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="30dp"
-                    android:textSize="15sp" />
-                <TextView
-                    android:id="@+id/tvFinalResult"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="30dp"
-                    android:textSize="15sp" />
-
-                <android.support.design.button.MaterialButton
-                    android:id="@+id/btnFinal"
-                    android:layout_width="163dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|center_horizontal"
-                    android:layout_marginHorizontal="30dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Refazer"
-                    android:textColorLink="@color/colorAccent"
-                    app:backgroundTint="@color/colorPrimary"/>
-
-            </LinearLayout>
-
-        </FrameLayout>
-
+            layout="@layout/frame_final"
+            android:visibility="gone"/>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

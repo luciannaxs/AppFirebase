@@ -1,0 +1,60 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/question_5"
+            android:textColor="@color/perguntas"
+            android:padding="5dp"
+            android:textSize="15sp"
+            android:maxLines="10" />
+
+        <RadioGroup
+            android:id="@+id/radioQuestao5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Construindo uma casa na árvore." />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reciclando papéis, jornais e revistas."
+                android:id="@+id/resposta5"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reutilizando metais e vidros." />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Indo em parques." />
+        </RadioGroup>
+
+        <android.support.design.button.MaterialButton
+            android:id="@+id/btnCinco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/res_responder"
+            app:backgroundTint="@color/colorPrimary"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginHorizontal="30dp"/>
+
+    </LinearLayout>
+
+</FrameLayout>

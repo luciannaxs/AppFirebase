@@ -1,0 +1,71 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/question_12"
+            android:textColor="@color/perguntas"
+            android:padding="5dp"
+            android:textSize="15sp"
+            android:maxLines="10" />
+
+        <RadioGroup
+            android:id="@+id/radioQuestao12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100 milhões"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="900 milhões" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50 milhões"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 milhões"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2,1 bilhões"
+                android:id="@+id/resposta12"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nenhuma das alternativas"/>
+
+        </RadioGroup>
+
+        <android.support.design.button.MaterialButton
+            android:id="@+id/btnDoze"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/res_responder"
+            app:backgroundTint="@color/colorPrimary"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginHorizontal="30dp"/>
+
+    </LinearLayout>
+
+</FrameLayout>

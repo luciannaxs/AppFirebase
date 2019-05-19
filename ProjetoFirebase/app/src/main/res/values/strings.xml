@@ -36,4 +36,12 @@
     <string name="menu_nova_conta">Nova conta</string>
     <string name="menu_configuracoes">Configuração</string>
     <string name="menu_resultado_final">Resultado</string>
+    <string name="question_5">Como preservar árvores e florestas?</string>
+    <string name="question_6">Os poluentes lançados no ar pelos escapamentos dos veículos e pelas chaminés das fábricas podem causar:</string>
+    <string name="question_7">Qual dos gases abaixo não é conhecido como um dos gases do Efeito Estufa (GEE)?</string>
+    <string name="question_8">Qual dos elementos abaixo não é utilizado como fonte de energia?</string>
+    <string name="question_9">Acerca da criação e da gestão de florestas públicas nacionais, julgue o item subsequente.  \nAs três modalidades de gestão de florestas públicas nacionais para produção sustentável são:\n-a concessão florestal ao setor privado \n-a destinação de florestas públicas às comunidades locais \n-gestão direta governamental pelo órgão competente integrante do Sistema Nacional de Unidades de Conservação.</string>
+    <string name="question_10">Quando o lixo é jogado nos rios, pode ocorrer:</string>
+    <string name="question_11">Qual atividade mais consome água no mundo:</string>
+    <string name="question_12">Segundo a UNICEF, OMS e  WHO, qual o número estimado de pessoas no mundo sem acesso à água potável?</string>
 </resources>

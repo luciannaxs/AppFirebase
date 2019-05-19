@@ -41,11 +41,27 @@ public class MainActivity extends AppCompatActivity
     private MaterialButton btnQuestao2;
     private MaterialButton btnQuestao3;
     private MaterialButton btnQuestao4;
+    private MaterialButton btnQuestao5;
+    private MaterialButton btnQuestao6;
+    private MaterialButton btnQuestao7;
+    private MaterialButton btnQuestao8;
+    private MaterialButton btnQuestao9;
+    private MaterialButton btnQuestao10;
+    private MaterialButton btnQuestao11;
+    private MaterialButton btnQuestao12;
 
     private FrameLayout frameQuestao1;
     private FrameLayout frameQuestao2;
     private FrameLayout frameQuestao3;
     private FrameLayout frameQuestao4;
+    private FrameLayout frameQuestao5;
+    private FrameLayout frameQuestao6;
+    private FrameLayout frameQuestao7;
+    private FrameLayout frameQuestao8;
+    private FrameLayout frameQuestao9;
+    private FrameLayout frameQuestao10;
+    private FrameLayout frameQuestao11;
+    private FrameLayout frameQuestao12;
     private FrameLayout frameFinal;
 
     private TextView tvUser;
@@ -61,9 +77,17 @@ public class MainActivity extends AppCompatActivity
     private RadioGroup rgQuestao2;
     private RadioGroup rgQuestao3;
     private RadioGroup rgQuestao4;
+    private RadioGroup rgQuestao5;
+    private RadioGroup rgQuestao6;
+    private RadioGroup rgQuestao7;
+    private RadioGroup rgQuestao8;
+    private RadioGroup rgQuestao9;
+    private RadioGroup rgQuestao10;
+    private RadioGroup rgQuestao11;
+    private RadioGroup rgQuestao12;
 
     private int qtdAcertos = 0;
-    private int qtdQuestoes = 4;
+    private int qtdQuestoes = 12;
     private double percAcertos = 0;
 
     @Override
@@ -123,12 +147,29 @@ public class MainActivity extends AppCompatActivity
         frameQuestao2 = findViewById(R.id.frameDois);
         frameQuestao3 = findViewById(R.id.frameTres);
         frameQuestao4 = findViewById(R.id.frameQuatro);
+        frameQuestao5 = findViewById(R.id.frameCinco);
+        frameQuestao6 = findViewById(R.id.frameSeis);
+        frameQuestao7 = findViewById(R.id.frameSete);
+        frameQuestao8 = findViewById(R.id.frameOito);
+        frameQuestao9 = findViewById(R.id.frameNove);
+        frameQuestao10 = findViewById(R.id.frameDez);
+        frameQuestao11 = findViewById(R.id.frameOnze);
+        frameQuestao12 = findViewById(R.id.frameDoze);
+
         frameFinal = findViewById(R.id.frameFinal);
 
         rgQuestao1 = findViewById(R.id.radioQuestao1);
         rgQuestao2 = findViewById(R.id.radioQuestao2);
         rgQuestao3 = findViewById(R.id.radioQuestao3);
         rgQuestao4 = findViewById(R.id.radioQuestao4);
+        rgQuestao5 = findViewById(R.id.radioQuestao5);
+        rgQuestao6 = findViewById(R.id.radioQuestao6);
+        rgQuestao7 = findViewById(R.id.radioQuestao7);
+        rgQuestao8 = findViewById(R.id.radioQuestao8);
+        rgQuestao9 = findViewById(R.id.radioQuestao9);
+        rgQuestao10 = findViewById(R.id.radioQuestao10);
+        rgQuestao11 = findViewById(R.id.radioQuestao11);
+        rgQuestao12 = findViewById(R.id.radioQuestao12);
 
         btnQuestao1 = findViewById(R.id.btnUm);
         btnQuestao1.setOnClickListener(new View.OnClickListener() {
@@ -165,11 +206,91 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 if (validaQuestao(rgQuestao4, (RadioButton) findViewById(R.id.resposta4))) {
-                    intentFrame(frameQuestao4, frameFinal);
+                    intentFrame(frameQuestao4, frameQuestao5);
+                }
+            }
+        });
+
+        btnQuestao5 = findViewById(R.id.btnCinco);
+        btnQuestao5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (validaQuestao(rgQuestao5, (RadioButton) findViewById(R.id.resposta5))) {
+                    intentFrame(frameQuestao5, frameQuestao6);
+                }
+            }
+        });
+
+        btnQuestao6 = findViewById(R.id.btnSeis);
+        btnQuestao6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (validaQuestao(rgQuestao6, (RadioButton) findViewById(R.id.resposta6))) {
+                    intentFrame(frameQuestao6, frameQuestao7);
+                }
+            }
+        });
+
+        btnQuestao7 = findViewById(R.id.btnSete);
+        btnQuestao7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (validaQuestao(rgQuestao7, (RadioButton) findViewById(R.id.resposta7))) {
+                    intentFrame(frameQuestao7, frameQuestao8);
+                }
+            }
+        });
+
+        btnQuestao8 = findViewById(R.id.btnOito);
+        btnQuestao8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (validaQuestao(rgQuestao8, (RadioButton) findViewById(R.id.resposta8))) {
+                    intentFrame(frameQuestao8, frameQuestao9);
+                }
+            }
+        });
+
+        btnQuestao9 = findViewById(R.id.btnNove);
+        btnQuestao9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (validaQuestao(rgQuestao9, (RadioButton) findViewById(R.id.resposta9))) {
+                    intentFrame(frameQuestao9, frameQuestao10);
+                }
+            }
+        });
+
+        btnQuestao10 = findViewById(R.id.btnDez);
+        btnQuestao10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (validaQuestao(rgQuestao10, (RadioButton) findViewById(R.id.resposta10))) {
+                    intentFrame(frameQuestao10, frameQuestao11);
+                }
+            }
+        });
+
+        btnQuestao11 = findViewById(R.id.btnOnze);
+        btnQuestao11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (validaQuestao(rgQuestao11, (RadioButton) findViewById(R.id.resposta11))) {
+                    intentFrame(frameQuestao11, frameQuestao12);
+                }
+            }
+        });
+
+        btnQuestao12 = findViewById(R.id.btnDoze);
+        btnQuestao12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (validaQuestao(rgQuestao12, (RadioButton) findViewById(R.id.resposta12))) {
+                    intentFrame(frameQuestao12, frameFinal);
                     calcPercAcertos();
                     tvAcertos.setText("Acertos: " + String.valueOf(qtdAcertos));
                     tvQtdQuestoes.setText("Qtd. questões: " + String.valueOf(qtdQuestoes));
-                    tvPercAcertos.setText("Taxa de acertos: " + String.valueOf(percAcertos));
+                    tvPercAcertos.setText("Taxa de acertos: " + String.valueOf(percAcertos)+ "%");
                     tvFinalResult.setText("Resultado: " + validaResultado());
                     gravarResultado();
                 }
@@ -232,7 +353,7 @@ public class MainActivity extends AppCompatActivity
                 if (dataSnapshot.getValue() != null) {
                     tvAcertos.setText("Acertos: " + dataSnapshot.child("acertos").getValue().toString());
                     tvQtdQuestoes.setText("Qtd. questoes: " + dataSnapshot.child("qtdQuestoes").getValue().toString());
-                    tvPercAcertos.setText("Taxa de acertos: " + dataSnapshot.child("percAcertos").getValue().toString());
+                    tvPercAcertos.setText("Taxa de acertos: " + dataSnapshot.child("percAcertos").getValue().toString() + "%");
                     tvFinalResult.setText("Resultado: " + dataSnapshot.child("resultado").getValue().toString());
                 } else
                     tvFinalResult.setText("Você ainda não fez nenhum Quiz!");
@@ -298,7 +419,6 @@ public class MainActivity extends AppCompatActivity
     }
 
     private String validaResultado() {
-
         if (this.percAcertos < 50)
             return "Ruim";
         else if (this.percAcertos > 50 && this.percAcertos < 80)

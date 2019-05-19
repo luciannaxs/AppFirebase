@@ -1,0 +1,61 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:paddingLeft="5dp"
+            android:text="@string/question_1"
+            android:textColor="@color/perguntas"
+            android:textSize="15sp" />
+
+        <RadioGroup
+            android:id="@+id/radioQuestao1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2,5% a 4%" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="40% a 60%" />
+
+            <RadioButton
+                android:id="@+id/resposta1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="70 a 75%" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="99%" />
+
+        </RadioGroup>
+
+        <android.support.design.button.MaterialButton
+            android:id="@+id/btnUm"
+            android:layout_width="178dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginHorizontal="30dp"
+            android:baselineAligned="false"
+            android:text="@string/res_responder"
+            app:backgroundTint="@color/colorPrimary" />
+
+    </LinearLayout>
+</FrameLayout>
