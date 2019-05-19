@@ -373,7 +373,6 @@ public class MainActivity extends AppCompatActivity
         frameQuestao4.setVisibility(View.GONE);
     }
 
-
     private void resetQuiz() {
         this.qtdAcertos = 0;
         this.rgQuestao1.clearCheck();
