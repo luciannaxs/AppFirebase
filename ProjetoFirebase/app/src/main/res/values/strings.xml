@@ -17,7 +17,7 @@
     <string name="res_btnCancelar">Cancelar</string>
     <string name="res_erroForm">Campo Obrigatório</string>
     <string name="res_responder">Responder</string>
-    <string name="question_4">A qualidade da água deve atender, entre outros, aos seguintes parâmetros analíticos:\\nI. cloro;\\nII. turbidez, cor e pH.\\nIII. coliformes e flúor.</string>
+    <string name="question_4">A qualidade da água deve atender, entre outros, aos seguintes parâmetros analíticos:\nI. cloro;\nII. turbidez, cor e pH.\nIII. coliformes e flúor.</string>
     <string name="title_activity_main2">ArchVerde</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

@@ -50,6 +50,11 @@ public class MainActivity extends AppCompatActivity
 
     private TextView tvUser;
     private TextView tvUserEmail;
+
+
+    private TextView tvQtdQuestoes;
+    private TextView tvAcertos;
+    private TextView tvPercAcertos;
     private TextView tvFinalResult;
 
     private RadioGroup rgQuestao1;
@@ -59,6 +64,7 @@ public class MainActivity extends AppCompatActivity
 
     private int qtdAcertos = 0;
     private int qtdQuestoes = 4;
+    private double percAcertos = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,6 +114,9 @@ public class MainActivity extends AppCompatActivity
         tvUserEmail = findViewById(R.id.tvUserEmail);
         tvUserEmail.setText(fireUser.getEmail());
 
+        tvQtdQuestoes = findViewById(R.id.tvQtdQuestoes);
+        tvAcertos = findViewById(R.id.tvAcertos);
+        tvPercAcertos = findViewById(R.id.tvPercAcertos);
         tvFinalResult = findViewById(R.id.tvFinalResult);
 
         frameQuestao1 = findViewById(R.id.frameUm);
@@ -157,7 +166,11 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View v) {
                 if (validaQuestao(rgQuestao4, (RadioButton) findViewById(R.id.resposta4))) {
                     intentFrame(frameQuestao4, frameFinal);
-                    tvFinalResult.setText(String.valueOf(qtdAcertos));
+                    calcPercAcertos();
+                    tvAcertos.setText("Acertos: " + String.valueOf(qtdAcertos));
+                    tvQtdQuestoes.setText("Qtd. questões: " + String.valueOf(qtdQuestoes));
+                    tvPercAcertos.setText("Taxa de acertos: " + String.valueOf(percAcertos));
+                    tvFinalResult.setText("Resultado: " + validaResultado());
                     gravarResultado();
                 }
             }
@@ -213,12 +226,15 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void selectFireResultado() {
-        fireRef.child("usuarios").child(fireUser.getUid()).child("resultado").addValueEventListener(new ValueEventListener() {
+        fireRef.child("usuarios").child(fireUser.getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.getValue() != null)
-                    tvFinalResult.setText(dataSnapshot.getValue().toString());
-                else
+                if (dataSnapshot.getValue() != null) {
+                    tvAcertos.setText("Acertos: " + dataSnapshot.child("acertos").getValue().toString());
+                    tvQtdQuestoes.setText("Qtd. questoes: " + dataSnapshot.child("qtdQuestoes").getValue().toString());
+                    tvPercAcertos.setText("Taxa de acertos: " + dataSnapshot.child("percAcertos").getValue().toString());
+                    tvFinalResult.setText("Resultado: " + dataSnapshot.child("resultado").getValue().toString());
+                } else
                     tvFinalResult.setText("Você ainda não fez nenhum Quiz!");
             }
 
@@ -265,21 +281,27 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void gravarResultado() {
-        double total = (this.qtdAcertos * 100) / this.qtdQuestoes;
-
-        String resultado = validaResultado(total);
+        String resultado = validaResultado();
 
         fireRef.child("usuarios").child(fireUser.getUid()).child("qtdQuestoes").setValue(qtdQuestoes);
         fireRef.child("usuarios").child(fireUser.getUid()).child("acertos").setValue(qtdAcertos);
         fireRef.child("usuarios").child(fireUser.getUid()).child("resultado").setValue(resultado);
-        fireRef.child("usuarios").child(fireUser.getUid()).child("percAcertos").setValue(total);
+        fireRef.child("usuarios").child(fireUser.getUid()).child("percAcertos").setValue(this.percAcertos);
     }
 
-    private String validaResultado(double total) {
+    private void calcPercAcertos() {
+        this.setPercAcertos((this.qtdAcertos * 100) / this.qtdQuestoes);
+    }
 
-        if (total < 50)
+    private void setPercAcertos(int i) {
+        this.percAcertos = i;
+    }
+
+    private String validaResultado() {
+
+        if (this.percAcertos < 50)
             return "Ruim";
-        else if (total > 50 && total < 80)
+        else if (this.percAcertos > 50 && this.percAcertos < 80)
             return "Bom";
 
         return "Excelente";

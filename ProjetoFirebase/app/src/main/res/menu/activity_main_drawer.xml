@@ -13,7 +13,7 @@
                     android:title="@string/menu_resultado_final" />
             </menu>
         </item>
-        <item android:title="Account">
+        <item android:title="Conta">
             <menu>
                 <item
                     android:id="@+id/nav_configuracoes"
