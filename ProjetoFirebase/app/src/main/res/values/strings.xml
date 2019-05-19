@@ -18,4 +18,22 @@
     <string name="res_erroForm">Campo Obrigatório</string>
     <string name="res_responder">Responder</string>
     <string name="question_4">A qualidade da água deve atender, entre outros, aos seguintes parâmetros analíticos:\\nI. cloro;\\nII. turbidez, cor e pH.\\nIII. coliformes e flúor.</string>
+    <string name="title_activity_main2">ArchVerde</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Configurações</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="menu_exit">Sair</string>
+    <string name="menu_nova_conta">Nova conta</string>
+    <string name="menu_configuracoes">Configuração</string>
+    <string name="menu_resultado_final">Resultado</string>
 </resources>
