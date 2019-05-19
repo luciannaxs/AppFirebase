@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">ProjetoFirebase</string>
+    <string name="tela_final">Resultado</string>
     <string name="question_1">Qual o percentual de água doce no planeta terra?</string>
     <string name="question_2">Qual o bioma (espaço geográfico) mais ameaçado do país?</string>
     <string name="question_3">Segundo a Organização Mundial de Saúde (OMS), a cada ano 7 milhões de pessoas morrem por causa da poluição do ar. No Brasil morrem:</string>
@@ -15,4 +16,6 @@
     <string name="res_btnCadastrar">Cadastrar</string>
     <string name="res_btnCancelar">Cancelar</string>
     <string name="res_erroForm">Campo Obrigatório</string>
+    <string name="res_responder">Responder</string>
+    <string name="question_4">A qualidade da água deve atender, entre outros, aos seguintes parâmetros analíticos:\\nI. cloro;\\nII. turbidez, cor e pH.\\nIII. coliformes e flúor.</string>
 </resources>

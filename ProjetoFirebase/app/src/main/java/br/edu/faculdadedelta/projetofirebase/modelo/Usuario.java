@@ -8,15 +8,35 @@ public class Usuario implements Serializable {
     private String nome;
     private String email;
     private String senha;
+    private String uid;
+    private int qtdAcertos;
 
     public Usuario() {
     }
 
-    public Usuario(Long id, String nome, String email, String senha) {
+    public Usuario(Long id, String uid, String nome, String email, String senha, int qtdAcertos) {
         this.id = id;
         this.nome = nome;
         this.email = email;
         this.senha = senha;
+        this.uid = uid;
+        this.qtdAcertos = qtdAcertos;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public int getQtdAcertos() {
+        return qtdAcertos;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
+    public void setQtdAcertos(int qtdAcertos) {
+        this.qtdAcertos = qtdAcertos;
     }
 
     public Long getId() {

@@ -124,8 +124,6 @@ public class LoginActivity extends AppCompatActivity {
         frameCadastro.setVisibility(View.GONE);
         frameLogin.setVisibility(View.VISIBLE);
         helper.limparCampos();
-
-
     }
 
     private void logar() {
@@ -155,5 +153,8 @@ public class LoginActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
+
+        }
     }
 }
